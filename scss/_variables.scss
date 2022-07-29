@@ -1,0 +1,22 @@
+$colour-primaire: #9356DC;
+$colour-secondaire: #FF79DA;
+$colour-tertiaire: #99E2D0;
+$colour-background-grey: #f6f6f6;
+$colour-background-darkgrey: #eaeaea;
+$colour-background-white: #FEFEFE;
+$colour-texte-black: #000000;
+$colour-texte-grey: #4d4d4d;
+$colour-footer: #353535;
+
+.darkgrey
+{
+    background-color: $colour-background-darkgrey;
+}
+.grey
+{
+    background-color: $colour-background-grey;
+}
+.white
+{
+    background-color: $colour-background-white;
+}

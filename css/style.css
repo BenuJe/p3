@@ -1,9 +1,252 @@
-p {
-  font-size: 15px;
+@font-face {
+  font-family: "Roboto"; /* Texte */
+  src: url(distrib/Polices/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: "Shrikhand"; /* Logo et titres */
+  src: url(distrib/Polices/Roboto-Medium.ttf);
+}
+.darkgrey {
+  background-color: #eaeaea;
 }
 
-body {
-  background-color: blue;
+.grey {
+  background-color: #f6f6f6;
+}
+
+.white {
+  background-color: #FEFEFE;
+}
+
+p, h1, h2, a {
+  margin: 0px 0px;
+  padding: 0px 0px;
+  font-family: "Roboto";
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.gras {
+  font-weight: bold;
+}
+
+.textegris {
+  color: #4d4d4d;
+}
+
+.flexrow {
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+}
+header img {
+  display: block;
+  width: 150px;
+  margin: auto;
+  padding-top: 16px;
+}
+
+.localisation {
+  width: 100%;
+  height: 50px;
+}
+.localisation--boite {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 150px;
+  margin: auto;
+}
+.localisation--boite p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #4d4d4d;
+  padding-top: 15px;
+}
+.localisation--boite i {
+  padding-top: 15px;
+  color: #4d4d4d;
+}
+
+.explorer {
+  width: 100%;
+  text-align: center;
+  height: 300px;
+}
+.explorer--boite {
+  height: 180px;
+  width: 90%;
+  padding: 40px 0px 80px 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.explorer--boite h1 {
+  font-weight: bold;
+  font-size: 25px;
+  color: #000000;
+}
+.explorer--boite p {
+  font-size: 16px;
+}
+.explorer--boite a {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  color: #FEFEFE;
+  width: 180px;
+  margin: 0px auto;
+  padding: 15px 10px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 30px;
+}
+
+.fonctionnement {
+  width: 100%;
+}
+.fonctionnement--boite {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+  margin-bottom: 45px;
+}
+.fonctionnement--boite--bulle a {
+  display: flex;
+  text-decoration: none;
+  background-color: #f6f6f6;
+  width: 85%;
+  margin: 0px auto;
+  height: 70px;
+  border-radius: 30px;
+  color: black;
+  font-weight: bold;
+}
+.fonctionnement--boite--bulle--chiffre {
+  text-align: center;
+  margin-top: 23px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #9356DC;
+  border-radius: 50%;
+  padding: 4px 4px;
+  color: white;
+  background-color: #9356DC;
+  transform: translateX(-10px);
+}
+.fonctionnement--boite--bulle i {
+  margin-top: 27px;
+  color: grey;
+  width: 10%;
+}
+.fonctionnement--boite--bulle--texte {
+  margin-top: 27px;
+  width: 80%;
+}
+.fonctionnement--boite--bulle a:hover {
+  background-color: #f5edff;
+}
+.fonctionnement--boite--bulle a:hover .MiniBulle {
+  color: #9356DC;
+}
+.fonctionnement h2 {
+  margin-top: 45px;
+  padding-left: 15px;
+  margin-bottom: 0px;
+}
+
+.restaurant {
+  width: 100%;
+}
+.restaurant--boite {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.restaurant--boite--bulle {
+  margin-left: 5%;
+  width: 90%;
+  height: 200px;
+  background-color: #FEFEFE;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.restaurant--boite--bulle--image {
+  height: 70%;
+  overflow: hidden;
+  border-radius: 20px 20px 0px 0px;
+}
+.restaurant--boite--bulle--image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.restaurant--boite--bulle--texte {
+  padding-top: 5px;
+}
+.restaurant--boite--bulle--texte p {
+  padding-top: 5px;
+}
+.restaurant--boite--bulle--coeur {
+  color: black;
+  height: 30%;
+  padding-top: 20px;
+}
+.restaurant--boite--bulle--coeur:hover .heart {
+  cursor: pointer;
+  color: #9356DC;
+}
+.restaurant h2 {
+  margin-left: 15px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+footer {
+  padding-left: 5%;
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  padding-bottom: 30px;
+}
+
+.footer--flex {
+  display: flex;
+  flex-direction: row;
+}
+
+footer p {
+  margin: 3px;
+  font-size: 14px;
+}
+
+footer i {
+  margin-top: 10px;
+}
+
+.iconefooter {
+  width: 20px;
+}
+
+.titrefooter {
+  font-family: "Shrikhand";
+  font-weight: bolder;
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

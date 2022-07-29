@@ -1,0 +1,24 @@
+@mixin flexcol()
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@mixin btn()
+{
+    padding: 15px 10px;
+    background: linear-gradient($colour-secondaire, $colour-primaire);
+    border-radius: 30px;
+}
+
+
+
+@mixin chiffreV {
+    
+    border: 1px solid $colour-primaire;
+    border-radius: 50%;
+    padding: 4px 4px;
+    color: white;
+    background-color: $colour-primaire;
+}

@@ -1,4 +1,9 @@
-p
-{
-    font-size: 15px;
+@font-face {
+    font-family: "Roboto"; /* Texte */
+    src: url(distrib/Polices/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Shrikhand"; /* Logo et titres */
+    src: url(distrib/Polices/Roboto-Medium.ttf);
 }
