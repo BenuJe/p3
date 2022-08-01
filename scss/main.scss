@@ -2,6 +2,7 @@
 @import "_fonction.scss";
 @import "_mixin.scss";
 @import "_variables.scss";
+@import "_shadow.scss";
 
 p , h1 , h2, a
 {
@@ -16,22 +17,9 @@ h2
     font-weight: bolder;
 }
 
-.gras
-{
-    font-weight: bold;
-}
-.textegris
-{
-    color: $colour-texte-grey;
-}
-.flexrow
-{
-    width: 90%;
-    margin-left: 5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+
+
+
 header
 {
     width: 100%;
@@ -54,9 +42,7 @@ header
 
     &--boite
     {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @include flexrow;
         width: 150px;
         margin: auto;
 
@@ -107,12 +93,6 @@ header
     
         & a 
         {
-            display: block;
-            text-decoration: none;
-            font-size: 16px;
-            color: $colour-background-white;
-            width: 180px;
-            margin: 0px auto;
             @include btn;
         }
 
@@ -194,7 +174,6 @@ header
         @include flexcol;
         &--bulle
         {
-
             margin-left: 5%;
             width: 90%;
             height: 200px;
@@ -211,9 +190,7 @@ header
             }
             &--image img
             {
-                width: 100%;
-                height: 100%;
-                object-fit:cover;
+               @include fitcontent;
             }
             &--texte
             {
@@ -250,15 +227,17 @@ header
 
 }
 
+
+
+
 footer
 {
-    padding-left: 5%;
+
     background-color: $colour-footer;
     @include flexcol;
     color: white;
     padding-bottom: 30px;
 }
-
 
 .footer--flex
 {
@@ -266,10 +245,13 @@ footer
     flex-direction: row;
 }
 
-footer p
+footer a
 {
+    display: block;
     margin: 3px;
     font-size: 14px;
+    text-decoration: none;
+    color: white;
 }
 footer i
 {
@@ -288,4 +270,117 @@ footer i
     font-style: italic;
     margin-bottom: 15px;
     margin-top: 15px;
+}
+
+/* --------------------------------Page Menu-------------------------------- */
+
+header 
+{
+   & i { 
+    position: absolute;
+    transform: translate(25px, -13px);
+   }
+
+   & a 
+   {
+    text-decoration: none;
+    color: $colour-texte-black;
+   }
+}
+
+
+
+.Menu_entete 
+{
+    height: 200px;
+    width: 100%;
+
+
+    &--fusion
+    {
+        position: absolute;
+        z-index: -1;
+        height: 230px;
+        width: 100%;
+        overflow: hidden;
+
+        & img
+        {
+            @include fitcontent;
+        }
+
+    }
+    
+
+}
+
+.Menu_menu 
+{
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+
+    &--titre
+    {
+        & h1
+        {
+            font-family: "Shrikhand";
+            font-weight: bold;
+            color: $colour-texte-black;
+            font-style: italic;
+        }
+
+        & i 
+        {
+            padding-top: 12px;
+        }
+    }
+
+    &--boite
+    {
+
+        &--titre
+        {
+            margin-bottom: 15px;
+        }
+        &--bulle
+        {
+            background-color: $colour-background-white;
+            border-radius: 10px 10px;
+            width: 95%;
+            height: 50px;
+            @include flexcol;
+            margin-bottom: 10px;
+
+            &--titre
+            {
+                padding: 8px 0px 5px 5px;
+            }
+
+            &--prix
+            {
+                height: 95%;
+                @include flexrow;
+                padding: 0px 15px 8px 5px;
+            }
+        }
+
+
+    }
+
+    &--bouton
+
+    {
+        margin-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    &--bouton a 
+    {
+        @include btn;
+    }
+}
+
+.Menu_footer
+{
+    height: 130%;
 }

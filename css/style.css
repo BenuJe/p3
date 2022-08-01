@@ -18,6 +18,61 @@
   background-color: #FEFEFE;
 }
 
+.margin5 {
+  margin-left: 5%;
+}
+
+.flexrow {
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.gras {
+  font-weight: bold;
+}
+
+.padd20 {
+  padding-top: 20px;
+}
+
+.padd30 {
+  padding-top: 30px;
+}
+
+.textegris {
+  color: #4d4d4d;
+}
+
+.ft25 {
+  font-size: 25px;
+}
+
+.ft15 {
+  font-size: 15px;
+}
+
+.ft20 {
+  font-size: 20px;
+}
+
+.ft12 {
+  font-size: 12px;
+}
+
+.greenroad {
+  height: 3px;
+  width: 35px;
+  margin: 2px 0px 5px 0px;
+  background-color: #99E2D0;
+}
+
+.headershadow {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
 p, h1, h2, a {
   margin: 0px 0px;
   padding: 0px 0px;
@@ -27,22 +82,6 @@ p, h1, h2, a {
 h2 {
   font-size: 20px;
   font-weight: bolder;
-}
-
-.gras {
-  font-weight: bold;
-}
-
-.textegris {
-  color: #4d4d4d;
-}
-
-.flexrow {
-  width: 90%;
-  margin-left: 5%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 header {
@@ -100,15 +139,16 @@ header img {
   font-size: 16px;
 }
 .explorer--boite a {
-  display: block;
   text-decoration: none;
+  padding: 15px 10px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 30px;
+  display: block;
   font-size: 16px;
   color: #FEFEFE;
   width: 180px;
   margin: 0px auto;
-  padding: 15px 10px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  border-radius: 30px;
+  text-align: center;
 }
 
 .fonctionnement {
@@ -213,7 +253,6 @@ header img {
 }
 
 footer {
-  padding-left: 5%;
   background-color: #353535;
   display: flex;
   flex-direction: column;
@@ -227,9 +266,12 @@ footer {
   flex-direction: row;
 }
 
-footer p {
+footer a {
+  display: block;
   margin: 3px;
   font-size: 14px;
+  text-decoration: none;
+  color: white;
 }
 
 footer i {
@@ -247,6 +289,90 @@ footer i {
   font-style: italic;
   margin-bottom: 15px;
   margin-top: 15px;
+}
+
+/* --------------------------------Page Menu-------------------------------- */
+header i {
+  position: absolute;
+  transform: translate(25px, -13px);
+}
+header a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.Menu_entete {
+  height: 200px;
+  width: 100%;
+}
+.Menu_entete--fusion {
+  position: absolute;
+  z-index: -1;
+  height: 230px;
+  width: 100%;
+  overflow: hidden;
+}
+.Menu_entete--fusion img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Menu_menu {
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+}
+.Menu_menu--titre h1 {
+  font-family: "Shrikhand";
+  font-weight: bold;
+  color: #000000;
+  font-style: italic;
+}
+.Menu_menu--titre i {
+  padding-top: 12px;
+}
+.Menu_menu--boite--titre {
+  margin-bottom: 15px;
+}
+.Menu_menu--boite--bulle {
+  background-color: #FEFEFE;
+  border-radius: 10px 10px;
+  width: 95%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.Menu_menu--boite--bulle--titre {
+  padding: 8px 0px 5px 5px;
+}
+.Menu_menu--boite--bulle--prix {
+  height: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 15px 8px 5px;
+}
+.Menu_menu--bouton {
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+.Menu_menu--bouton a {
+  text-decoration: none;
+  padding: 15px 10px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 30px;
+  display: block;
+  font-size: 16px;
+  color: #FEFEFE;
+  width: 180px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.Menu_footer {
+  height: 130%;
 }
 
 /*# sourceMappingURL=style.css.map */

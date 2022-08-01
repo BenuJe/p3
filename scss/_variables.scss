@@ -20,3 +20,66 @@ $colour-footer: #353535;
 {
     background-color: $colour-background-white;
 }
+
+.margin5
+{
+    margin-left: 5%;
+}
+
+.flexrow
+{
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.gras
+{
+    font-weight: bold;
+}
+
+.padd20
+{
+    padding-top: 20px;
+}
+
+.padd30
+{
+    padding-top: 30px;
+}
+
+.textegris
+{
+    color: $colour-texte-grey;
+}
+
+.ft25
+{
+    font-size: 25px;
+}
+
+.ft15
+{
+    font-size: 15px;
+}
+
+.ft20
+
+{
+    font-size: 20px;
+}
+
+.ft12
+{
+    font-size: 12px;
+}
+
+.greenroad
+{
+    height: 3px;
+    width: 35px;
+    margin: 2px 0px 5px 0px;
+    background-color: $colour-tertiaire;
+}
