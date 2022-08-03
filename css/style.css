@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Roboto"; /* Texte */
-  src: url(distrib/Polices/Roboto-Medium.ttf);
+  src: url(../distrib/Polices/Roboto-Medium.ttf);
 }
 @font-face {
   font-family: "Shrikhand"; /* Logo et titres */
-  src: url(distrib/Polices/Roboto-Medium.ttf);
+  src: url(../distrib/Polices/Shrikhand-Regular.ttf);
 }
 .darkgrey {
   background-color: #eaeaea;
@@ -70,13 +70,25 @@
 }
 
 .headershadow {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 3px;
 }
 
-p, h1, h2, a {
+.boxshadow {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px;
+}
+
+* {
+  position: relative;
+}
+
+p, a {
   margin: 0px 0px;
   padding: 0px 0px;
   font-family: "Roboto";
+}
+
+h1, h2 {
+  font-family: "Shrikhand";
 }
 
 h2 {
@@ -87,6 +99,7 @@ h2 {
 header {
   width: 100%;
   height: 60px;
+  z-index: 2;
 }
 header img {
   display: block;
@@ -131,7 +144,7 @@ header img {
   justify-content: space-between;
 }
 .explorer--boite h1 {
-  font-weight: bold;
+  font-family: "Shrikhand";
   font-size: 25px;
   color: #000000;
 }
@@ -252,7 +265,7 @@ header img {
   margin-bottom: 10px;
 }
 
-footer {
+.footer {
   background-color: #353535;
   display: flex;
   flex-direction: column;
@@ -260,22 +273,22 @@ footer {
   color: white;
   padding-bottom: 30px;
 }
-
-.footer--flex {
-  display: flex;
-  flex-direction: row;
-}
-
-footer a {
+.footer a {
   display: block;
-  margin: 3px;
+  margin: 2px 0px 2px 5%;
   font-size: 14px;
   text-decoration: none;
   color: white;
 }
-
-footer i {
+.footer i {
   margin-top: 10px;
+}
+.footer--flex {
+  display: flex;
+  flex-direction: row;
+}
+.footer--flex a {
+  margin-left: 2px;
 }
 
 .iconefooter {
@@ -284,9 +297,7 @@ footer i {
 
 .titrefooter {
   font-family: "Shrikhand";
-  font-weight: bolder;
   font-size: 20px;
-  font-style: italic;
   margin-bottom: 15px;
   margin-top: 15px;
 }
@@ -304,21 +315,17 @@ header a {
 .Menu_entete {
   height: 200px;
   width: 100%;
-}
-.Menu_entete--fusion {
-  position: absolute;
-  z-index: -1;
-  height: 230px;
-  width: 100%;
   overflow: hidden;
 }
-.Menu_entete--fusion img {
+.Menu_entete img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .Menu_menu {
+  z-index: 2;
+  margin-top: -30px;
   width: 100%;
   border-radius: 20px 20px 0px 0px;
 }
@@ -369,10 +376,6 @@ header a {
   width: 180px;
   margin: 0px auto;
   text-align: center;
-}
-
-.Menu_footer {
-  height: 130%;
 }
 
 /*# sourceMappingURL=style.css.map */

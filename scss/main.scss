@@ -4,11 +4,21 @@
 @import "_variables.scss";
 @import "_shadow.scss";
 
-p , h1 , h2, a
+*
+{
+    position: relative;
+}
+
+p , a
 {
     margin: 0px 0px;
     padding: 0px 0px;
     font-family: "Roboto";
+}
+
+h1, h2
+{
+    font-family: "Shrikhand";
 }
 
 h2
@@ -24,6 +34,7 @@ header
 {
     width: 100%;
     height: 60px;
+    z-index: 2;
 
     & img 
     {   
@@ -81,7 +92,7 @@ header
        
         & h1 
         {
-            font-weight: bold;
+            font-family: "Shrikhand";
             font-size: 25px;
             color: $colour-texte-black;
         }
@@ -227,36 +238,38 @@ header
 
 }
 
-
-
-
-footer
+.footer
 {
 
     background-color: $colour-footer;
     @include flexcol;
     color: white;
     padding-bottom: 30px;
-}
 
-.footer--flex
-{
+    & a 
+        {
+            display: block;
+            margin: 2px 0px 2px 5%;
+            font-size: 14px;
+            text-decoration: none;
+            color: white;
+        }  
+
+    & i 
+    {
+        margin-top: 10px;
+    }
+    &--flex 
+    {
     display: flex;
     flex-direction: row;
+        & a 
+        {
+            margin-left: 2px;
+        }
+    }
 }
 
-footer a
-{
-    display: block;
-    margin: 3px;
-    font-size: 14px;
-    text-decoration: none;
-    color: white;
-}
-footer i
-{
-    margin-top: 10px;
-}
 .iconefooter
 {
     width: 20px;
@@ -265,9 +278,7 @@ footer i
 .titrefooter
 {
     font-family: "Shrikhand";
-    font-weight: bolder;
     font-size: 20px;
-    font-style: italic;
     margin-bottom: 15px;
     margin-top: 15px;
 }
@@ -294,28 +305,18 @@ header
 {
     height: 200px;
     width: 100%;
+    overflow: hidden;
 
-
-    &--fusion
+    & img
     {
-        position: absolute;
-        z-index: -1;
-        height: 230px;
-        width: 100%;
-        overflow: hidden;
-
-        & img
-        {
-            @include fitcontent;
-        }
-
-    }
-    
-
+        @include fitcontent;
+    } 
 }
 
 .Menu_menu 
 {
+    z-index: 2;
+    margin-top: -30px;
     width: 100%;
     border-radius: 20px 20px 0px 0px;
 
@@ -380,7 +381,3 @@ header
     }
 }
 
-.Menu_footer
-{
-    height: 130%;
-}
