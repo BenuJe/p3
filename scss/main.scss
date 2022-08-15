@@ -6,6 +6,7 @@
 @import "_loader.scss";
 @import "_coeur.scss";
 @import "_light.scss";
+@import "_checkbox.scss";
 
 *
 {
@@ -378,7 +379,7 @@ header
             {
                 height: 95%;
                 @include flexrow;
-                padding: 0px 15px 8px 5px;
+                /*padding: 0px 15px 8px 5px;*/
             }
         }
 

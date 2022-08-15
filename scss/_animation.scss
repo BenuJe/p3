@@ -25,7 +25,8 @@
 @keyframes Coeur{
 
   0% {
-    fill: $colour-background-grey;
+    fill: url(#svgcouleur);
+    fill-opacity: 0;
     stroke: black;
     stroke-width: 10px;
   }
@@ -37,14 +38,16 @@
   50% {
     stroke-width: 1px;
     transform: scale(1.5);
-    fill: $colour-primaire; /* Voir _variable */
+    fill: url(#svgcouleur); /* Voir _variable */
+    fill-opacity: 1;
   }
 
   70% {
     stroke-width: 3px;
   }
   100% {
-    fill: $colour-background-grey;
+    fill: url(#svgcouleur);
+    fill-opacity: 0;
     stroke: black;
     stroke-width: 10px;
   }
@@ -65,12 +68,12 @@
 
 @keyframes CheckboxBoite {
 
-  0%{
+  from {
     width: 0px;
   }
 
-  100%{
-    width: 30px;
+  to {
+    width: 50px;
   }
   
 }

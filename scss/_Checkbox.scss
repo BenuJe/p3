@@ -1,0 +1,18 @@
+.Menu_menu--boite--bulle:hover .Checkbox
+{
+    animation: CheckboxBoite ease-out 1000ms forwards;
+}
+
+.Menu_menu--boite--bulle:hover .circlecheck 
+{
+    transform-origin: 25px 25px;
+    animation: CheckboxCercle ease-in 1000ms forwards 500ms;
+}
+
+.elipse
+{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+

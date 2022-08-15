@@ -96,7 +96,8 @@
 }
 @keyframes Coeur {
   0% {
-    fill: #f6f6f6;
+    fill: url(#svgcouleur);
+    fill-opacity: 0;
     stroke: black;
     stroke-width: 10px;
   }
@@ -106,13 +107,15 @@
   50% {
     stroke-width: 1px;
     transform: scale(1.5);
-    fill: #9356DC; /* Voir _variable */
+    fill: url(#svgcouleur); /* Voir _variable */
+    fill-opacity: 1;
   }
   70% {
     stroke-width: 3px;
   }
   100% {
-    fill: #f6f6f6;
+    fill: url(#svgcouleur);
+    fill-opacity: 0;
     stroke: black;
     stroke-width: 10px;
   }
@@ -128,11 +131,11 @@
   }
 }
 @keyframes CheckboxBoite {
-  0% {
+  from {
     width: 0px;
   }
-  100% {
-    width: 30px;
+  to {
+    width: 50px;
   }
 }
 .darkgrey {
@@ -246,7 +249,7 @@
 }
 
 .coeur-animation:hover {
-  animation: Coeur 3300ms ease-in-out 0s infinite normal forwards; /* Voir _animation */
+  animation: Coeur 3s ease-in-out 0s infinite normal forwards; /* Voir _animation */
 }
 
 /* Voir _variable */
@@ -260,12 +263,23 @@
   box-shadow: rgba(32, 32, 32, 0.3) 0px 3px 3px;
 }
 
-.boxshadow:hover > .circlecheck {
-  animation: CheckboxBoite 2s ease-in infinite normal forwards;
-}
-
 .Menu_menu--bouton a:hover {
   background: linear-gradient(#ff93e1, #a16be0); /* Voir _variable */
+}
+
+.Menu_menu--boite--bulle:hover .Checkbox {
+  animation: CheckboxBoite ease-out 1000ms forwards;
+}
+
+.Menu_menu--boite--bulle:hover .circlecheck {
+  transform-origin: 25px 25px;
+  animation: CheckboxCercle ease-in 1000ms forwards 500ms;
+}
+
+.elipse {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 * {
@@ -561,7 +575,7 @@ header a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0px 15px 8px 5px;
+  /*padding: 0px 15px 8px 5px;*/
 }
 .Menu_menu--bouton {
   margin-top: 30px;
