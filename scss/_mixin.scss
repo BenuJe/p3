@@ -17,26 +17,28 @@
 {
     text-decoration: none;
     padding: 15px 10px;
-    background: linear-gradient($colour-secondaire, $colour-primaire);
+    background: linear-gradient($colour-secondaire, $colour-primaire); /* Voir _variable */
     border-radius: 30px;
     display: block;
     font-size: 16px;
-    color: $colour-background-white;
+    color: $colour-background-white; /* Voir _variable */
     width: 180px;
     margin: 0px auto;
     text-align: center;
 }
 
-
+@mixin LightBouton {
+    background: linear-gradient(lighten($colour-secondaire,5), lighten($colour-primaire,5)); /* Voir _variable */
+}
 
 @mixin chiffreV {
     
-    border: 1px solid $colour-primaire;
+    border: 1px solid $colour-primaire; /* Voir _variable */
     border-radius: 50%;
     padding: 4px 4px;
     color: white;
-    background-color: $colour-primaire;
-}
+    background-color: $colour-primaire; /* Voir _variable */
+} 
 
 @mixin fitcontent {
     width: 100%;

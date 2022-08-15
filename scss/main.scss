@@ -1,8 +1,11 @@
 @import "_font.scss";
-@import "_fonction.scss";
+@import "_animation.scss";
 @import "_mixin.scss";
 @import "_variables.scss";
 @import "_shadow.scss";
+@import "_loader.scss";
+@import "_coeur.scss";
+@import "_light.scss";
 
 *
 {
@@ -216,8 +219,10 @@ header
             &--coeur
             {
                 color: black;
-                height: 30%;
-                padding-top: 20px;
+                width: 25px;
+                height: 25px;
+                padding-top: 10px;
+                
             }
             &--coeur:hover .heart
             {
@@ -299,8 +304,6 @@ header
    }
 }
 
-
-
 .Menu_entete 
 {
     height: 200px;
@@ -349,8 +352,22 @@ header
             border-radius: 10px 10px;
             width: 95%;
             height: 50px;
-            @include flexcol;
+            @include flexrow;
             margin-bottom: 10px;
+
+            &--gauche
+            {
+                width: 100%;
+            }
+
+            &--droite
+            {
+                width: 0px;
+                height: 100%;
+                background-color: aquamarine;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
 
             &--titre
             {

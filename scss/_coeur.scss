@@ -1,0 +1,13 @@
+
+
+.coeur-animation
+{
+    stroke: black;
+    stroke-width: 10px;
+    fill: none;
+}
+
+.coeur-animation:hover
+{
+    animation: Coeur 3300ms ease-in-out 0s infinite normal forwards; /* Voir _animation */
+}

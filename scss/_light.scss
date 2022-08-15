@@ -1,0 +1,23 @@
+$colour-primaire-light: lighten($colour-primaire,10); /* Voir _variable */
+$colour-primaire-light: lighten($colour-secondaire,10); /* Voir _variable */
+$colour-primaire-light: lighten($colour-tertiaire,10); /* Voir _variable */
+
+.explorer--boite a:hover /* voir _mixine */
+{
+    @include LightBouton;
+}
+
+.boxshadow:hover /* Voir _shadow */
+{
+    box-shadow: rgba(32, 32, 32, 0.3) 0px 3px 3px; 
+}
+
+.boxshadow:hover > .circlecheck
+{
+    animation: CheckboxBoite 2s ease-in infinite normal forwards;
+}
+
+.Menu_menu--bouton a:hover
+{
+    @include LightBouton;
+}
