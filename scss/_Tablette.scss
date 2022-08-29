@@ -1,0 +1,33 @@
+@mixin tablette {
+
+.flexR
+{
+    @include flexrow;
+    width: 95%;
+}
+
+.restaurant h2
+{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+
+
+.footer
+{
+    flex-direction: row;
+    padding-bottom: 0px;
+    justify-content: space-around;
+
+    & a, i
+    {
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+}
+
+
+}

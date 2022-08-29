@@ -1,18 +1,16 @@
 .Menu_menu--boite--bulle:hover .Checkbox
 {
-    animation: CheckboxBoite ease-out 1000ms forwards;
+    animation: CheckboxBoite ease-out 650ms forwards;
 }
 
 .Menu_menu--boite--bulle:hover .circlecheck 
 {
     transform-origin: 25px 25px;
-    animation: CheckboxCercle ease-in 1000ms forwards 500ms;
+    animation: CheckboxCercle ease-in 350ms forwards 300ms;
 }
 
-.elipse
-{
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
 
+.Menu_menu--boite--bulle:hover .Menu_menu--boite--bulle--gauche {
+    animation: GaucheWidth ease-out 650ms forwards;
+  }
+  

@@ -77,3 +77,36 @@
   }
   
 }
+
+@keyframes GaucheWidth {
+  from {
+    width: 100%;
+  }
+  to {
+    width: calc(100% - 50px);
+  }
+}
+
+@keyframes GreenRoad {
+  0% {
+    width: 0px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 200px;
+  }
+}
+
+@keyframes MenuAnime {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}

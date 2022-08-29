@@ -1,0 +1,130 @@
+@mixin PC {
+/* Queries pour l'index : */
+.fonctionnement--boite
+{
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 300px;
+    margin-bottom: 0px;
+    
+    & h2
+    {
+        width: 100%;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    &--bulle
+    {
+        width: 30%;
+    }
+}
+
+.flexR
+{
+    @include flexrow;
+    width: 95%;
+}
+
+.restaurant h2
+{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+
+
+.footer
+{
+    flex-direction: row;
+    padding-bottom: 0px;
+    justify-content: space-around;
+
+    & a, i
+    {
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+}
+
+.marginF
+{
+    margin-left: 0px;
+}
+
+/* Queries pour les menus : */
+
+.margin5
+{
+    margin-left: 2%;
+}
+
+.Menu_menu
+{   
+    &--titre .ft20
+    {
+        font-size: 30px;
+
+    }
+
+    &--titre 
+    {
+        width: 96%;
+        padding-bottom: 20px;
+    }
+
+    &--titre svg
+    {
+        padding-top: 15px;
+    }
+
+    &--boite
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: 50px;
+
+        &--titre
+        {
+            width: 100%;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        &--titre .ft15
+
+        {
+            font-size: 30px;
+        }
+
+        &--bulle
+        {
+            width: 25%;
+        }
+
+    }
+}
+
+.bulle4 /* La note enchanté possède 4 bulles. */
+{
+    width: 35%;
+    margin-bottom: 50px;
+}
+
+.greenroad
+{
+    display: none;
+}
+
+.biggreenroad
+{
+    display: block;
+    animation: GreenRoad ease-out 1500ms forwards;
+}
+
+}

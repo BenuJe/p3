@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Roboto"; /* Texte */
   src: url(../distrib/Polices/Roboto-Medium.ttf);
@@ -69,11 +70,24 @@
   background-color: #99E2D0;
 }
 
+.biggreenroad {
+  height: 3px;
+  width: 200px;
+  margin: 2px auto;
+  background-color: #99E2D0;
+}
+
 .circlecheck {
   padding-top: 50%;
   padding-left: 25%;
   color: white;
   opacity: 0;
+}
+
+.elipse {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @keyframes off {
@@ -136,6 +150,36 @@
   }
   to {
     width: 50px;
+  }
+}
+@keyframes GaucheWidth {
+  from {
+    width: 100%;
+  }
+  to {
+    width: calc(100% - 50px);
+  }
+}
+@keyframes GreenRoad {
+  0% {
+    width: 0px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 200px;
+  }
+}
+@keyframes MenuAnime {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
   }
 }
 .darkgrey {
@@ -201,11 +245,24 @@
   background-color: #99E2D0;
 }
 
+.biggreenroad {
+  height: 3px;
+  width: 200px;
+  margin: 2px auto;
+  background-color: #99E2D0;
+}
+
 .circlecheck {
   padding-top: 50%;
   padding-left: 25%;
   color: white;
   opacity: 0;
+}
+
+.elipse {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .headershadow {
@@ -224,7 +281,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 3;
   animation: off; /* Voir _animation */
   animation-duration: 3s;
   transition: opacity 3s ease-in-out;
@@ -234,7 +291,7 @@
 .bloc__loader {
   border: solid 17px lightgrey;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 2;
   width: 167px;
   height: 167px;
   border-top-color: #9356DC; /* Voir _variable */
@@ -268,18 +325,28 @@
 }
 
 .Menu_menu--boite--bulle:hover .Checkbox {
-  animation: CheckboxBoite ease-out 1000ms forwards;
+  animation: CheckboxBoite ease-out 650ms forwards;
 }
 
 .Menu_menu--boite--bulle:hover .circlecheck {
   transform-origin: 25px 25px;
-  animation: CheckboxCercle ease-in 1000ms forwards 500ms;
+  animation: CheckboxCercle ease-in 350ms forwards 300ms;
 }
 
-.elipse {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+.Menu_menu--boite--bulle:hover .Menu_menu--boite--bulle--gauche {
+  animation: GaucheWidth ease-out 650ms forwards;
+}
+
+.boite1 {
+  animation: MenuAnime ease-in 1500ms forwards;
+}
+
+.boite2 {
+  animation: MenuAnime ease-out 1500ms forwards 400ms;
+}
+
+.boite3 {
+  animation: MenuAnime ease-out 1500ms forwards 800ms;
 }
 
 * {
@@ -338,18 +405,17 @@ header img {
 .explorer {
   width: 100%;
   text-align: center;
-  height: 300px;
 }
 .explorer--boite {
   height: 180px;
   width: 90%;
-  padding: 40px 0px 80px 5%;
+  padding: 34px 0px 50px 5%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .explorer--boite h1 {
-  font-family: "Shrikhand";
+  font-family: "Roboto"; /* Roboto ou Shrikand ? titre -> Shrikand, maquette roboto ?*/
   font-size: 25px;
   color: #000000;
 }
@@ -367,6 +433,7 @@ header img {
   width: 180px;
   margin: 0px auto;
   text-align: center;
+  margin-top: 15px;
 }
 
 .fonctionnement {
@@ -418,6 +485,7 @@ header img {
   color: #9356DC;
 }
 .fonctionnement h2 {
+  font-family: "Roboto"; /* Roboto ou Shrikand ? titre -> Shrikand, maquette roboto ?*/
   margin-top: 45px;
   padding-left: 15px;
   margin-bottom: 0px;
@@ -466,9 +534,10 @@ header img {
   color: #9356DC;
 }
 .restaurant h2 {
+  font-family: "Roboto"; /* Roboto ou Shrikand ? titre -> Shrikand, maquette roboto ?*/
   margin-left: 15px;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 .footer {
@@ -477,7 +546,7 @@ header img {
   flex-direction: column;
   justify-content: space-between;
   color: white;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 .footer a {
   display: block;
@@ -504,8 +573,22 @@ header img {
 .titrefooter {
   font-family: "Shrikhand";
   font-size: 20px;
-  margin-bottom: 15px;
-  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-top: 13px;
+}
+
+.nouveau {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 15px;
+  border-radius: 2px;
+  border: 1px solid #c1ede2;
+  background-color: #c1ede2;
+  color: #278870;
+  padding: 7px 12px 6px 12px;
+  text-align: center;
+  /* le carré vert */
 }
 
 /* --------------------------------Page Menu-------------------------------- */
@@ -558,12 +641,13 @@ header a {
   margin-bottom: 10px;
 }
 .Menu_menu--boite--bulle--gauche {
+  padding-left: 5px;
   width: 100%;
 }
 .Menu_menu--boite--bulle--droite {
   width: 0px;
   height: 100%;
-  background-color: aquamarine;
+  background-color: #99E2D0;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -575,7 +659,7 @@ header a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /*padding: 0px 15px 8px 5px;*/
+  padding: 0px 15px 8px 5px;
 }
 .Menu_menu--bouton {
   margin-top: 30px;
@@ -592,6 +676,123 @@ header a {
   width: 180px;
   margin: 0px auto;
   text-align: center;
+}
+
+.biggreenroad {
+  display: none;
+}
+
+.boite1, .boite2, .boite3 {
+  opacity: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .flexR {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+  }
+  .restaurant h2 {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+  .footer {
+    flex-direction: row;
+    padding-bottom: 0px;
+    justify-content: space-around;
+  }
+  .footer a, .footer i {
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* Queries pour l'index : */
+  .fonctionnement--boite {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 300px;
+    margin-bottom: 0px;
+  }
+  .fonctionnement--boite h2 {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+  }
+  .fonctionnement--boite--bulle {
+    width: 30%;
+  }
+  .flexR {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+  }
+  .restaurant h2 {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+  .footer {
+    flex-direction: row;
+    padding-bottom: 0px;
+    justify-content: space-around;
+  }
+  .footer a, .footer i {
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+  .marginF {
+    margin-left: 0px;
+  }
+  /* Queries pour les menus : */
+  .margin5 {
+    margin-left: 2%;
+  }
+  .Menu_menu--titre .ft20 {
+    font-size: 30px;
+  }
+  .Menu_menu--titre {
+    width: 96%;
+    padding-bottom: 20px;
+  }
+  .Menu_menu--titre svg {
+    padding-top: 15px;
+  }
+  .Menu_menu--boite {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 50px;
+  }
+  .Menu_menu--boite--titre {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .Menu_menu--boite--titre .ft15 {
+    font-size: 30px;
+  }
+  .Menu_menu--boite--bulle {
+    width: 25%;
+  }
+  .bulle4 {
+    width: 35%;
+    margin-bottom: 50px;
+  }
+  .greenroad {
+    display: none;
+  }
+  .biggreenroad {
+    display: block;
+    animation: GreenRoad ease-out 1500ms forwards;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
